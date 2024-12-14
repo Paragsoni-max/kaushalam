@@ -33,6 +33,7 @@ const SignInForm = () => {
         setLoading(true)
         try {
             const response = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/login`, values)
+            console.log(response)
             if (response.status === 200) {
                 setLoading(false)
                 toast({
@@ -40,7 +41,9 @@ const SignInForm = () => {
                     description: "Welcome back!",
                 })
                 localStorage.setItem('token', response.data.token)
+                localStorage.setItem('userId', response.data.userId)
                 setCookie('token', response.data.token, { path: '/' })
+                setCookie('userid', response.data.userId, { path: '/' })
                 router.push('/todos')
             } else {
                 setLoading(false)
