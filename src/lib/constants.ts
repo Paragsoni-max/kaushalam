@@ -5,8 +5,8 @@ const NAV_LINKS = [
 ];
 
 const FOOTER_LINKS = [
-  { name: "Privacy Policy", href: "/privacy-policy" },
-  { name: "Terms and Conditions", href: "/terms-and-conditions" },
+  { name: "Privacy Policy", href: "#" },
+  { name: "Terms and Conditions", href: "#" },
 ];
 
 export { NAV_LINKS, FOOTER_LINKS };
